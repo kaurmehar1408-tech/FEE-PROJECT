@@ -1,0 +1,214 @@
+/* ================= GENERAL ================= */
+/* Apply to all elements */
+*{
+    margin:0; /* Remove default margin */
+    padding:0; /* Remove default padding */
+    box-sizing:border-box; /* Include padding in width calculation */
+    font-family:Arial, sans-serif; /* Set default font */
+}
+/* Body styling */
+body{
+    background:#020617; /* Dark background */
+    color:white; /* White text */
+    animation:fadeIn 1s ease-in; /* Page fade-in animation */
+}
+/* ================= HEADER ================= */
+header{
+    display:flex; /* Flexbox layout */
+    justify-content:space-between; /* Space between logo and nav */
+    align-items:center; /* Vertical alignment */
+    padding:20px 60px; /* Space inside header */
+    background:#020617; /* Header background */
+    position:sticky; /* Sticky header */
+    top:0; /* Stick to top */
+    z-index:1000; /* Keep above other elements */
+}
+/* Logo styling */
+.logo{
+    color:#fbbf24; /* Gold color */
+    font-size:28px; /* Larger text */
+    font-weight:bold; /* Bold text */
+}
+/* Navigation links */
+nav a{
+    color:white; /* White text */
+    margin-left:25px; /* Space between links */
+    text-decoration:none; /* Remove underline */
+    font-size:18px; /* Font size */
+    position:relative; /* Needed for underline animation */
+}
+/* Underline hover animation */
+nav a::after{
+    content:""; /* Empty content */
+    position:absolute; /* Position underline */
+    width:0%; /* Start from 0 width */
+    height:2px; /* Line thickness */
+    background:#fbbf24; /* Gold color */
+    left:0; /* Start from left */
+    bottom:-5px; /* Position below text */
+    transition:0.4s; /* Smooth animation */
+}
+/* On hover underline expands */
+nav a:hover::after{
+    width:100%; /* Full width underline */
+}
+/* ================= HERO VIDEO ================= */
+.hero{
+    position:relative; /* Needed for absolute video */
+    height:80vh; /* Hero height */
+    display:flex; /* Flexbox */
+    justify-content:center; /* Center horizontally */
+    align-items:center; /* Center vertically */
+    text-align:center; /* Center text */
+    overflow:hidden; /* Hide overflow */
+}
+/* Background video */
+.bg-video{
+    position:absolute; /* Absolute positioning */
+    top:0; /* Top */
+    left:0; /* Left */
+    width:100%; /* Full width */
+    height:100%; /* Full height */
+    object-fit:cover; /* Cover entire area */
+}
+/* Dark overlay */
+.overlay{
+    position:absolute; /* Overlay position */
+    top:0; /* Top */
+    left:0; /* Left */
+    width:100%; /* Full width */
+    height:100%; /* Full height */
+    background:rgba(0,0,0,0.5); /* Dark transparent overlay */
+}
+/* Hero text content */
+.hero-content{
+    position:relative; /* Above video */
+    z-index:2; /* Bring text above overlay */
+    color:white; /* Text color */
+}
+/* Hero heading */
+.hero-content h2{
+    font-size:48px; /* Large heading */
+    margin-bottom:10px; /* Space below */
+    animation:slideDown 1.5s ease; /* Slide animation */
+}
+/* Hero paragraph */
+.hero-content p{
+    font-size:20px; /* Paragraph size */
+    color:#e2e8f0; /* Light gray text */
+}
+/* ================= DESTINATIONS ================= */
+.destinations{
+    padding:40px 0; /* Space top and bottom */
+}
+/* Country title */
+.scroll-container h2{
+    width:100%; /* Full width */
+    text-align:center; /* Center text */
+    margin-bottom:10px; /* Space below */
+    color:#fbbf24; /* Gold color */
+}
+/* Horizontal scroll row */
+.scroll-container{
+    display:flex; /* Flexbox row */
+    overflow-x:auto; /* Horizontal scroll */
+    gap:20px; /* Space between cards */
+    padding:20px; /* Padding */
+    scroll-behavior:smooth; /* Smooth scrolling */
+    align-items:flex-start; /* Align items at top */
+}
+/* Scrollbar styling */
+.scroll-container::-webkit-scrollbar{
+    height:8px; /* Scrollbar height */
+}
+/* Scrollbar thumb */
+.scroll-container::-webkit-scrollbar-thumb{
+    background:#020617; /* Scrollbar color */
+    border-radius:10px; /* Rounded scrollbar */
+}
+/* Destination cards */
+.card{
+    min-width:250px; /* Minimum card width */
+    max-width:250px; /* Maximum card width */
+    background:#111827; /* Card background */
+    border-radius:12px; /* Rounded corners */
+    overflow:hidden; /* Hide overflow */
+    text-align:center; /* Center text */
+    transition:0.4s; /* Smooth hover */
+    animation:fadeUp 1s ease; /* Fade animation */
+    flex-shrink:0; /* Prevent shrinking */
+}
+/* Card image */
+.card img{
+    width:100%; /* Full width image */
+    height:220px; /* Fixed height */
+    object-fit:cover; /* Crop image */
+}
+/* Card text */
+.card h4{
+    padding:12px; /* Space inside */
+    font-size:15px; /* Text size */
+}
+/* Hover animation */
+.card:hover{
+    transform:scale(1.08); /* Zoom effect */
+    box-shadow:0 0 20px rgba(251,191,36,0.5); /* Glow effect */
+}
+/* ================= FOOTER ================= */
+footer{
+    background:#111827; /* Dark background */
+    text-align:center; /* Center text */
+    padding:20px; /* Padding */
+    margin-top:40px; /* Space above footer */
+}
+/* ================= ANIMATIONS ================= */
+/* Fade in animation */
+@keyframes fadeIn{
+    from{opacity:0;} /* Start invisible */
+    to{opacity:1;} /* End visible */
+}
+/* Slide down animation */
+@keyframes slideDown{
+    from{
+        opacity:0; /* Invisible */
+        transform:translateY(-50px); /* Move from top */
+    }
+    to{
+        opacity:1; /* Visible */
+        transform:translateY(0); /* Normal position */
+    }
+}
+/* Fade up animation */
+@keyframes fadeUp{
+    from{
+        opacity:0; /* Invisible */
+        transform:translateY(40px); /* Move up */
+    }
+    to{
+        opacity:1; /* Visible */
+        transform:translateY(0); /* Normal */
+    }
+}
+/* ================= RESPONSIVE ================= */
+@media(max-width:768px){   
+    header{
+        flex-direction:column; /* Stack header items */
+        text-align:center; /* Center header text */
+    }
+    nav{
+        margin-top:10px; /* Space above nav */
+    }
+    .hero-content h2{
+        font-size:28px; /* Smaller heading */
+    }
+    .hero-content p{
+        font-size:16px; /* Smaller paragraph */
+    }
+    .card{
+        min-width:200px; /* Smaller cards */
+        max-width:200px;
+    }
+    .card img{
+        height:180px; /* Smaller images */
+    }
+}

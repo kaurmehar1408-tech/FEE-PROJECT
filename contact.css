@@ -1,0 +1,179 @@
+/* ================= GENERAL ================= */
+/* Style for whole page */
+body{
+    margin:0; /* Remove default margin */
+    font-family:Arial, sans-serif; /* Set font */
+    background:#020617; /* Dark background */
+    color:white; /* White text */
+}
+/* ================= HEADER ================= */
+header{
+    position:sticky; /* Header stays on top while scrolling */
+    top:0; /* Stick to top */
+    z-index:1000; /* Keep header above other elements */
+    display:flex; /* Flexbox layout */
+    justify-content:space-between; /* Space between logo and nav */
+    align-items:center; /* Vertical alignment */
+    padding:20px 60px; /* Space inside header */
+}
+/* Logo styling */
+.logo{
+    color:#fbbf24; /* Gold color */
+    font-size:24px; /* Font size */
+    font-weight:bold; /* Bold text */
+}
+/* Navbar links */
+nav a{
+    color:white; /* White text */
+    margin-left:25px; /* Space between links */
+    text-decoration:none; /* Remove underline */
+    font-size:18px; /* Font size */
+    position:relative; /* Needed for underline animation */
+}
+/* Underline Hover Animation */
+nav a::after{
+    content:""; /* Empty content */
+    position:absolute; /* Position underline */
+    width:0%; /* Hidden by default */
+    height:2px; /* Line thickness */
+    background:#fbbf24; /* Gold color */
+    left:0; /* Start from left */
+    bottom:-5px; /* Position below text */
+    transition:0.3s; /* Smooth animation */
+}
+/* Show underline on hover */
+nav a:hover::after{
+    width:100%; /* Full width underline */
+}
+/* ================= VIDEO SECTION ================= */
+/* Video section container */
+.video-section{
+    position:relative; /* Needed for overlay content */
+    height:60vh; /* Section height */
+    display:flex; /* Flexbox */
+    justify-content:center; /* Center horizontally */
+    align-items:center; /* Center vertically */
+    text-align:center; /* Center text */
+    overflow:hidden; /* Hide overflow */
+}
+/* Background video */
+.bg-video{
+    position:absolute; /* Behind content */
+    width:100%; /* Full width */
+    height:100%; /* Full height */
+    object-fit:cover; /* Cover entire area */
+}
+/* ================= CONTACT SECTION ================= */
+/* Contact section */
+.contact{
+    padding:80px 8%;
+    text-align:center;
+}
+/* Container for contact info + form */
+.contact-container{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:35px;
+    flex-wrap:wrap;
+    margin-top:40px;
+}
+/* Contact info boxes */
+.info-box{
+    background:#111827;
+    padding:35px 25px;
+    border-radius:18px;
+    width:280px;
+    margin-bottom:25px;
+    transition:0.3s;
+}
+/* Hover effect on info box */
+.info-box:hover{
+    transform:translateY(-8px); /* Move up */
+    box-shadow:0 0 15px rgba(251,191,36,0.3); /* Glow */
+}
+/* Contact form container */
+.contact-form{
+    background:#111827;
+    padding:35px;
+    border-radius:18px;
+    width:380px;
+    height:fit-content;
+}
+/* Input fields and textarea */
+.contact-form input,
+.contact-form textarea{
+    width:100%;
+    padding:14px 16px;
+    margin:10px 0;
+    border:none;
+    border-radius:10px;
+    box-sizing:border-box;
+    font-size:16px;
+}
+.contact-form textarea{
+    height:90px;
+    resize:none;
+}
+/* Submit button */
+.contact-form button{
+    width:100%;
+    padding:14px;
+    border:none;
+    background:#fbbf24;
+    color:black;
+    font-weight:bold;
+    border-radius:10px;
+    font-size:17px;
+    cursor:pointer;
+    transition:0.3s;
+}
+/* Button hover */
+.contact-form button:hover{
+    background:#f59e0b;
+    transform:translateY(-2px);
+}
+/* ================= FOOTER ================= */
+/* Footer styling */
+footer{
+    background:linear-gradient(to top, #020617, #0f172a); /* Gradient background */
+    text-align:center; /* Center text */
+    padding:40px 20px; /* Space inside footer */
+    border-top:1px solid rgba(255,255,255,0.1); /* Top border */
+}
+/* Footer heading */
+footer h2{
+    color:#fbbf24; /* Gold color */
+    margin-bottom:10px; /* Space below */
+}
+/* Footer text */
+footer p{
+    color:#cbd5e1; /* Light gray */
+    margin:5px 0; /* Space between lines */
+}
+/* Footer links */
+footer nav a{
+    color:white; /* White text */
+    margin:0 10px; /* Space between links */
+    text-decoration:none; /* Remove underline */
+}
+/* Footer link hover */
+footer nav a:hover{
+    color:#fbbf24; /* Gold on hover */
+}
+/* Copyright text */
+.copy{
+    margin-top:15px; /* Space above */
+    font-size:14px; /* Small text */
+    color:#94a3b8; /* Light gray */
+}
+/* ================= RESPONSIVE ================= */
+/* For mobile devices */
+@media(max-width:768px){
+    header{
+        flex-direction:column; /* Stack logo and nav */
+    }
+    .video-text h2{
+        font-size:28px; /* Smaller heading */
+    }
+}

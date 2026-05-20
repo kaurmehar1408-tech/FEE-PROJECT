@@ -1,0 +1,219 @@
+/* Reset default margin and padding for all elements */
+*{
+    margin:0; /* Remove default margin */
+    padding:0; /* Remove default padding */
+    box-sizing:border-box; /* Include padding and border in element width */
+    transition:0.3s; /* Smooth transition for hover effects */
+}
+/* Body styling */
+body{
+    font-family:Arial, sans-serif; /* Set font */
+    background:#020617; /* Dark background color */
+    color:white; /* Text color white */
+}
+/* Header styling */
+header{
+    display:flex; /* Use flexbox */
+    justify-content:space-between; /* Space between logo and nav */
+    align-items:center; /* Align items vertically center */
+    padding:20px 60px; /* Space inside header */
+    background:#020617; /* Header background color */
+}
+/* Logo styling */
+.logo{
+    color:#fbbf24; /* Gold color logo */
+}
+/* Navigation links */
+nav a{
+    color:white; /* Link text color */
+    margin-left:25px; /* Space between links */
+    text-decoration:none; /* Remove underline */
+    font-size:18px; /* Font size */
+    position:relative; /* IMPORTANT for underline positioning */
+}
+/* Underline hover animation */
+nav a::after{
+    content:""; /* Empty content */
+    position:absolute; /* Position underline */
+    width:0%; /* Start from 0 width */
+    height:2px; /* Line thickness */
+    background:#fbbf24; /* Gold color */
+    left:0; /* Start from left */
+    bottom:-5px; /* Position below text */
+    transition:0.4s; /* Smooth animation */
+}
+/* On hover show underline */
+nav a:hover::after{
+    width:100%; /* Full width underline */
+}
+/* Hero section styling */
+.hero{
+    position:relative; /* Needed for absolute video */
+    height:90vh; /* 90% of screen height */
+    display:flex; /* Flexbox */
+    justify-content:center; /* Center horizontally */
+    align-items:center; /* Center vertically */
+    text-align:center; /* Center text */
+    overflow:hidden; /* Hide overflow */
+}
+/* Background video */
+.bg-video{
+    position:absolute; /* Position video */
+    top:0; /* Top position */
+    left:0; /* Left position */
+    width:100%; /* Full width */
+    height:100%; /* Full height */
+    object-fit:cover; /* Cover full area */
+}
+/* Dark overlay over video */
+.overlay{
+    position:absolute; /* Position overlay */
+    top:0; /* Top */
+    left:0; /* Left */
+    width:100%; /* Full width */
+    height:100%; /* Full height */
+    background:rgba(0,0,0,0.6); /* Black transparent overlay */
+}
+/* Hero content */
+.hero-content{
+    position:relative; /* Above video */
+    z-index:2; /* Bring text above overlay */
+    animation: fadeIn 0s ease; /* Fade animation */
+}
+/* Hero heading */
+.hero h2{
+    font-size:50px; /* Large text */
+    margin-bottom:20px; /* Space below */
+    animation: slideDown 1.5s ease; /* Slide animation */
+}
+/* Hero paragraph */
+.hero p{
+    font-size:20px; /* Medium text */
+    margin-bottom:30px; /* Space below */
+    color:#cbd5e1; /* Light gray text */
+    animation: fadeIn 2s ease; /* Fade animation */
+}
+/* Slide down animation */
+@keyframes slideDown{
+    from{
+        opacity:0; /* Invisible */
+        transform:translateY(-50px); /* Move from top */
+    }
+    to{
+        opacity:1; /* Visible */
+        transform:translateY(0); /* Normal position */
+    }
+}
+/* Button styling */
+.btn{
+    padding:12px 25px; /* Button size */
+    background:#fbbf24; /* Gold color */
+    color:black; /* Text color */
+    text-decoration:none; /* Remove underline */
+    border-radius:8px; /* Rounded corners */
+    margin:10px; /* Space around button */
+    display:inline-block; /* Button shape */
+}
+/* Button hover effect */
+.btn:hover{
+    transform:scale(1.08); /* Zoom effect */
+    background:#f59e0b; /* Dark gold */
+}
+/* Secondary button */
+.btn2{
+    background:transparent; /* Transparent */
+    border:2px solid #fbbf24; /* Gold border */
+    color:#fbbf24; /* Gold text */
+}
+/* Secondary button hover */
+.btn2:hover{
+    background:#fbbf24; /* Gold background */
+    color:black; /* Black text */
+}
+/* Feature and testimonial container */
+.feature-container,
+.testimonial-container{
+    display:flex; /* Flexbox */
+    overflow-x:auto; /* Horizontal scroll */
+    gap:25px; /* Space between cards */
+    padding:20px; /* Padding */
+    scroll-behavior:smooth; /* Smooth scroll */
+}
+/* Hide scrollbar */
+.feature-container::-webkit-scrollbar,
+.testimonial-container::-webkit-scrollbar{
+    display:none; /* Hide scrollbar */
+}
+/* Feature card and testimonial card */
+.feature-card,
+.testimonial-card{
+    min-width:260px; /* Card width */
+    flex:0 0 auto; /* Prevent shrinking */
+    padding:25px; /* Inner space */
+    border-radius:12px; /* Rounded corners */
+    background:#111827; /* Dark card background */
+    transition:0.3s; /* Smooth hover */
+}
+/* Card hover effect */
+.feature-card:hover,
+.testimonial-card:hover{
+    transform:translateY(-10px) scale(1.05); /* Move up + zoom */
+    box-shadow:0 0 20px rgba(251,191,36,0.4); /* Glow effect */
+}
+/* Testimonials section */
+.testimonials{
+    padding:60px 10%; /* Section spacing */
+    text-align:center; /* Center text */
+    background:#020617; /* Dark background */
+}
+/* Testimonial container */
+.testimonial-container{
+    display:flex; /* Flexbox */
+    justify-content:center; /* Center cards */
+    gap:30px; /* Space between cards */
+    flex-wrap:wrap; /* Wrap on small screens */
+}
+/* Testimonial card */
+.testimonial-card{
+    width:250px; /* Card width */
+    padding:20px; /* Padding */
+    border-radius:12px; /* Rounded corners */
+    background:#111827; /* Card background */
+}
+/* Hover effect */
+.testimonial-card:hover{
+    transform:scale(1.05); /* Zoom */
+}
+/* Footer */
+footer{
+    background:#111827; /* Dark background */
+    text-align:center; /* Center text */
+    padding:30px; /* Padding */
+}
+/* Footer text */
+.copy{
+    color:#fffcfc; /* White text */
+}
+/* Fade animation */
+@keyframes fadeIn{
+    from{
+        opacity:0; /* Invisible */
+        transform:translateY(40px); /* Move up */
+    }
+    to{
+        opacity:1; /* Visible */
+        transform:translateY(0); /* Normal */
+    }
+}
+/* Responsive design */
+@media (max-width:768px){
+    header{
+        flex-direction:column; /* Stack header items */
+    }
+    .hero h2{
+        font-size:32px; /* Smaller heading */
+    }
+    .hero p{
+        font-size:16px; /* Smaller text */
+    }
+}

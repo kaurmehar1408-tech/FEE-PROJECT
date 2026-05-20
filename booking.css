@@ -1,0 +1,186 @@
+/* ================= GENERAL STYLING ================= */
+/* Style for entire page */
+body{
+    margin:0; /* Remove default margin */
+    font-family:Arial, sans-serif; /* Set font */
+    background:#0f172a; /* Dark blue background */
+    color:white; /* White text */
+    text-align:center; /* Center all text */
+}
+/* ================= HEADER ================= */
+header{
+    top:0; /* Stick to top */
+    z-index:1000; /* Keep header above everything */
+    display:flex; /* Flexbox layout */
+    justify-content:space-between; /* Space between logo and nav */
+    align-items:center; /* Vertical alignment */
+    padding:20px 60px; /* Space inside header */
+}
+/* Logo styling */
+.logo{
+    color:#fbbf24; /* Gold color */
+    font-size:24px; /* Logo size */
+    font-weight:bold; /* Bold text */
+}
+/* Navbar links */
+nav a{
+    color:white; /* White text */
+    margin-left:25px; /* Space between links */
+    text-decoration:none; /* Remove underline */
+    font-size:18px; /* Font size */
+    position:relative; /* Needed for underline animation */
+}
+/* Underline Hover Animation */
+nav a::after{
+    content:""; /* Empty content */
+    position:absolute; /* Position underline */
+    width:0%; /* Hidden by default */
+    height:2px; /* Line thickness */
+    background:#fbbf24; /* Gold color */
+    left:0; /* Start from left */
+    bottom:-5px; /* Position below text */
+    transition:0.3s; /* Smooth animation */
+}
+/* Show underline on hover */
+nav a:hover::after{
+    width:100%; /* Full underline */
+}
+/* ================= BOOKING SECTION ================= */
+/* Booking section */
+.booking{
+    padding:60px 20px; /* Space around section */
+}
+/* Booking heading */
+.booking h2{
+    font-size:40px; /* Large heading */
+    color:#fbbf24; /* Gold color */
+}
+/* Booking paragraph */
+.booking p{
+    color:#cbd5f5; /* Light text color */
+}
+/* ================= PACKAGE CARDS ================= */
+/* Package container */
+.packages{
+    display:flex; /* Flexbox */
+    justify-content:center; /* Center cards */
+    gap:30px; /* Space between cards */
+    margin-top:40px; /* Space above */
+    flex-wrap:wrap; /* Wrap cards on small screens */
+}
+/* Each package card */
+.card{
+    background:#111827; /* Card background */
+    padding:25px; /* Inner space */
+    width:250px; /* Card width */
+    border-radius:12px; /* Rounded corners */
+    box-shadow:0 0 15px rgba(0,0,0,0.5); /* Shadow */
+    transition:0.3s; /* Smooth animation */
+}
+/* Hover effect */
+.card:hover{
+    transform:translateY(-10px); /* Move card up */
+    box-shadow:0 0 20px rgba(251,191,36,0.5); /* Glow effect */
+}
+/* Price styling */
+.price{
+    font-size:24px; /* Price text size */
+    color:#fbbf24; /* Gold color */
+    margin:10px 0; /* Space around price */
+}
+/* Select button */
+.card button{
+    padding:10px 20px; /* Button size */
+    background:#fbbf24; /* Gold background */
+    border:none; /* Remove border */
+    border-radius:8px; /* Rounded button */
+    cursor:pointer; /* Pointer cursor */
+    transition:0.3s; /* Smooth hover */
+}
+/* Button hover */
+.card button:hover{
+    background:#ffdd57; /* Light gold */
+    transform:scale(1.05); /* Slight zoom */
+}
+/* ================= BOOKING FORM ================= */
+.booking-form{
+    background:#111827;
+    padding:40px;
+    width:55%;
+    margin:50px auto;
+    border-radius:18px;
+    box-shadow:0 0 20px rgba(0,0,0,0.4);
+}
+.booking-form h3{
+    color:#fbbf24;
+    margin-bottom:25px;
+    font-size:28px;
+}
+/* FORM LAYOUT */
+.booking-form form{
+    display:flex;
+    flex-direction:column;
+    gap:18px;
+}
+/* INPUTS */
+.booking-form input,
+.booking-form select{
+    width:100%;
+    padding:14px 16px;
+    border:none;
+    border-radius:10px;
+    outline:none;
+    font-size:16px;
+    box-sizing:border-box;
+}
+/* BUTTON */
+.booking-form button{
+    width:100%;
+    padding:14px;
+    background:#fbbf24;
+    border:none;
+    border-radius:10px;
+    cursor:pointer;
+    font-size:18px;
+    font-weight:bold;
+    transition:0.3s;
+}
+.booking-form button:hover{
+
+    background:#ffdd57;
+    transform:translateY(-2px);
+}
+/* ================= FOOTER ================= */
+/* Footer styling */
+footer{
+    background:linear-gradient(to top, #020617, #0f172a); /* Gradient background */
+    text-align:center; /* Center text */
+    padding:40px 20px; /* Space inside footer */
+    border-top:1px solid rgba(255,255,255,0.1); /* Top border */
+}
+/* Footer heading */
+footer h2{
+    color:#fbbf24; /* Gold color */
+    margin-bottom:10px; /* Space below */
+}
+/* Footer text */
+footer p{
+    color:#cbd5e1; /* Light gray */
+    margin:5px 0; /* Space between lines */
+}
+/* Footer links */
+footer nav a{
+    color:white; /* White text */
+    margin:0 10px; /* Space between links */
+    text-decoration:none; /* Remove underline */
+}
+/* Footer link hover */
+footer nav a:hover{
+    color:#fbbf24; /* Gold on hover */
+}
+/* Copyright text */
+.copy{
+    margin-top:15px; /* Space above */
+    font-size:14px; /* Small text */
+    color:#94a3b8; /* Light gray */
+}

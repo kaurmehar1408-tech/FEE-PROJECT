@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Book Your Trip - TravelSphere</title>
+    <link rel="stylesheet" href="booking.css">
+    <script src="booking.js"></script>
+</head>
+<body>
+<!-- ================= HEADER / NAVBAR ================= -->
+<header>
+    <h1 class="logo">TravelSphere</h1>
+    <!-- Navigation menu to move between pages -->
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="destinations.html">Destinations</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="booking.html">Booking</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+</header>
+<!-- ================= BOOKING SECTION ================= -->
+<section class="booking">
+    <h2>Book Your Dream Trip</h2>
+    <p>Select a package and fill the booking form</p>
+    <!-- ================= PACKAGE CARDS ================= -->
+    <div class="packages">
+    <!-- Paris -->
+    <div class="card">
+        <span class="badge">💎 Luxury</span>
+        <h3>Paris Getaway</h3>
+        <p class="tag">The City of Love</p>
+        <p>📍 Paris, France</p>
+        <p>⭐ 4.7 Rating</p>
+        <p>5 Days / 4 Nights</p>
+        <p class="includes">Includes: Hotel, Breakfast, City Tour</p>
+        <p class="price">₹95,000</p>
+    </div>
+    <!-- Bali -->
+    <div class="card">
+        <span class="badge">🔥 Popular</span>
+        <h3>Bali Vacation</h3>
+        <p class="tag">Island of Gods</p>
+        <p>📍 Bali, Indonesia</p>
+        <p>⭐ 4.6 Rating</p>
+        <p>6 Days / 5 Nights</p>
+        <p class="includes">Includes: Resort, Breakfast, Island Tour</p>
+        <p class="price">₹75,000</p>
+    </div>
+    <!-- Dubai -->
+    <div class="card">
+        <span class="badge">💎 Luxury</span>
+        <h3>Dubai Luxury Tour</h3>
+        <p class="tag">Experience the City of Gold</p>
+        <p>📍 Dubai, UAE</p>
+        <p>⭐ 4.8 Rating</p>
+        <p>4 Days / 3 Nights</p>
+        <p class="includes">Includes: Hotel, Breakfast, Desert Safari</p>
+        <p class="price">₹65,000</p>
+    </div>
+    <!-- Switzerland -->
+    <div class="card">
+        <span class="badge">⭐ Best Seller</span>
+        <h3>Switzerland Tour</h3>
+        <p class="tag">Heaven on Earth</p>
+        <p>📍 Switzerland</p>
+        <p>⭐ 4.9 Rating</p>
+        <p>6 Days / 5 Nights</p>
+        <p class="includes">Includes: Hotel, Breakfast, Mountain Tour</p>
+        <p class="price">₹1,20,000</p>
+    </div>
+    <!-- Goa -->
+    <div class="card">
+        <h3>Goa Beach Holiday</h3>
+        <p class="tag">Beach Paradise</p>
+        <p>📍 Goa, India</p>
+        <p>⭐ 4.5 Rating</p>
+        <p>3 Days / 2 Nights</p>
+        <p class="includes">Includes: Hotel, Breakfast</p>
+        <p class="price">₹15,000</p>
+    </div>
+    <!-- Manali -->
+    <div class="card">
+        <h3>Manali Adventure Trip</h3>
+        <p class="tag">Snow Adventure</p>
+        <p>📍 Manali, India</p>
+        <p>⭐ 4.4 Rating</p>
+        <p>4 Days / 3 Nights</p>
+        <p class="includes">Includes: Hotel, Breakfast, Sightseeing</p>
+        <p class="price">₹18,000</p>
+    </div>
+    <!-- Kashmir -->
+    <div class="card">
+        <h3>Kashmir Paradise</h3>
+        <p class="tag">Paradise on Earth</p>
+        <p>📍 Kashmir, India</p>
+        <p>⭐ 4.7 Rating</p>
+        <p>5 Days / 4 Nights</p>
+        <p class="includes">Includes: Hotel, Breakfast, Shikara Ride</p>
+        <p class="price">₹22,000</p>
+    </div>
+    <!-- Jaipur -->
+    <div class="card">
+        <h3>Jaipur Heritage Tour</h3>
+        <p class="tag">Royal Heritage</p>
+        <p>📍 Jaipur, India</p>
+        <p>⭐ 4.3 Rating</p>
+        <p>2 Days / 1 Night</p>
+        <p class="includes">Includes: Hotel, Breakfast</p>
+        <p class="price">₹10,000</p>
+    </div>
+</div>
+    <!-- ================= BOOKING FORM ================= -->
+    <div class="booking-form">
+        <h3>Booking Form</h3>
+        <form>
+            <input type="text" placeholder="Full Name" required>
+            <input type="email" placeholder="Email" required>
+            <input type="date" required>
+            <select id="destination">
+                <option>Select Destination</option>
+                <option>Paris</option>
+                <option>Bali</option>
+                <option>Dubai</option>
+                <option>Switzerland</option>
+                <option>Goa</option>
+                <option>Manali</option>
+                <option>Kashmir</option>
+                <option>Jaipur</option>
+                <option>London</option>
+                <option>New York</option>
+                <option>Tokyo</option>
+                <option>Singapore</option>
+                <option>Leh Ladakh</option>
+                <option>Udaipur</option>
+            </select>
+            <input type="number" placeholder="Number of People">
+            <button type="submit">Book Now</button>
+        </form>
+    </div>
+</section>
+<!-- ================= FOOTER ================= -->
+<footer>
+    <p class="copy">&copy; 2026 TravelSphere. All Rights Reserved.</p>
+</footer>
+</body>
+</html>

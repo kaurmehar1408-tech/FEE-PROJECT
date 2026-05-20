@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TravelSphere - Customer Reviews</title>
+    <link rel="stylesheet" href="gallery.css">
+</head>
+<body>
+    <!-- ================= HEADER ================= -->
+    <header>
+        <h1 class="logo">TravelSphere</h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="destinations.html">Destinations</a>
+            <a href="gallery.html">Gallery</a>
+            <a href="booking.html">Booking</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+    <section class="hero">
+        <div class="hero-bg-text">MEMORIES</div>
+        <div class="hero-content">
+            <span class="hero-tag">
+                ✦ Travellers Stories
+            </span>
+            <h1>
+                What Our <span>Explorers</span> Say
+            </h1>
+            <p>
+                Real journeys. Real emotions. Real reviews from our global traveller community.
+            </p>
+            <div class="stats">
+                <div class="stat-box">
+                    <h2 class="counter" data-target="4.6">4.6</h2>
+                    <span>Average Rating</span>
+                </div>
+                <div class="stat-box">
+                    <h2 class="counter" data-target="500">500</h2>
+                    <span>Happy Travellers</span>
+                </div>
+                <div class="stat-box">
+                    <h2 class="counter" data-target="460">460</h2>
+                    <span>Would Recommend</span>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- FILTERS -->
+    <section class="filters">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="india">India</button>
+        <button class="filter-btn" data-filter="international">International</button>
+        <button class="filter-btn" data-filter="luxury">Luxury</button>
+        <button class="filter-btn" data-filter="adventure">Adventure</button>
+    </section>
+    <!-- REVIEWS -->
+    <section class="reviews-section">
+        <div class="section-title">
+            <h2>Traveller Reviews</h2>
+            <p>Experiences shared by our explorers</p>
+        </div>
+        <div class="reviews-grid" id="reviewsGrid">
+            <!-- CARD 1 -->
+            <div class="review-card" data-category="international luxury">
+                <div class="image-box">
+                    <img src="IMAGES/PARIS.jpeg" alt="">
+                    <span class="destination-tag">Paris</span>
+                </div>
+                <div class="review-content">
+                    <div class="stars">★★★★★</div>
+                    <p>"Beautiful Trip experience with luxury hotels."</p>
+                    <div class="reviewer">
+                        <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=1">
+                        <div>
+                            <h4>Rahul Sharma</h4>
+                            <span>Mumbai</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- CARD 2 -->
+            <div class="review-card" data-category="india adventure">
+                <div class="image-box">
+                    <img src="IMAGES/Kashmir.jpeg" alt="">
+                    <span class="destination-tag">Kashmir</span>
+                </div>
+                <div class="review-content">
+                    <div class="stars">★★★★★</div>
+                    <p>"Snow mountains and lakes were absolutely breathtaking."</p>
+                    <div class="reviewer">
+                        <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=2">
+                        <div>
+                            <h4>Anjali Mehta</h4>
+                            <span>Delhi</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- CARD 3 -->
+            <div class="review-card" data-category="international luxury">
+                <div class="image-box">
+                    <img src="IMAGES/DUBAI2.jpeg" alt="">
+                    <span class="destination-tag">Dubai</span>
+                </div>
+                <div class="review-content">
+                    <div class="stars">★★★★★</div>
+                    <p>"Luxury shopping and amazing nightlife experience."</p>
+                    <div class="reviewer">
+                        <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=3">
+                        <div>
+                            <h4>Sanya Sharma</h4>
+                            <span>Punjab</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- CARD 4 -->
+            <div class="review-card" data-category="india luxury">
+                <div class="image-box">
+                    <img src="IMAGES/UDAIPUR.jpeg" alt="">
+                    <span class="destination-tag">Udaipur</span>
+                </div>
+                <div class="review-content">
+                    <div class="stars">★★★★★</div>
+                    <p>"Royal palace stay was unforgettable and luxurious."</p>
+                    <div class="reviewer">
+                        <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=4">
+                        <div>
+                            <h4>Priya Verma</h4>
+                            <span>Jaipur</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- CARD 5 -->
+            <div class="review-card" data-category="international adventure">
+                <div class="image-box">
+                    <img src="IMAGES/Switzerland2.jpeg" alt="">
+                    <span class="destination-tag">Switzerland</span>
+                </div>
+                <div class="review-content">
+                    <div class="stars">★★★★★</div>
+                    <p>"The Alps looked unreal and magical."</p>
+                    <div class="reviewer">
+                        <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=5">
+                        <div>
+                            <h4>Julie</h4>
+                            <span>Ontario</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- CARD 6 -->
+            <div class="review-card" data-category="india adventure">
+                <div class="image-box">
+                    <img src="IMAGES/Manali.jpeg" alt="">
+                    <span class="destination-tag">Manali</span>
+                </div>
+                <div class="review-content">
+                    <div class="stars">★★★★★</div>
+                    <p>"Adventure sports and snow activities were amazing."</p>
+                    <div class="reviewer">
+                        <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=6">
+                        <div>
+                            <h4>Simran Kaur</h4>
+                            <span>Chandigarh</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- CARD 7 -->
+            <div class="review-card" data-category="international luxury">
+                <div class="image-box">
+                    <img src="IMAGES/Melbourne.jpg" alt="">
+                    <span class="destination-tag">Melbourne</span>
+                </div>
+                <div class="review-content">
+                    <div class="stars">★★★★★</div>
+                    <p>"Water villas and beaches were paradise-like."</p>
+                    <div class="reviewer">
+                        <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=7">
+                        <div>
+                            <h4>Richard</h4>
+                            <span>New Zealand</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- CARD 8 -->
+            <div class="review-card" data-category="india luxury">
+                <div class="image-box">
+                    <img src="IMAGES/Goa.jpeg" alt="">
+                    <span class="destination-tag">Goa</span>
+                </div>
+                <div class="review-content">
+                    <div class="stars">★★★★★</div>
+                    <p>"Beach resorts and nightlife were excellent."</p>
+                    <div class="reviewer">
+                        <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=8">
+                        <div>
+                            <h4>Rohan Das</h4>
+                            <span>Kolkata</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- CARD 9 -->
+            <div class="review-card" data-category="international adventure">
+                <div class="image-box">
+                    <img src="IMAGES/TOKYO.jpeg" alt="">
+                    <span class="destination-tag">Tokyo</span>
+                </div>
+                <div class="review-content">
+                    <div class="stars">★★★★★</div>
+                    <p>"Modern culture and food were unforgettable."</p>
+                    <div class="reviewer">
+                        <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=9">
+                        <div>
+                            <h4>Alexander</h4>
+                            <span>Cambodia</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- CARD 10 -->
+            <div class="review-card" data-category="india adventure">
+                <div class="image-box">
+                    <img src="IMAGES/ladakh.jpeg" alt="">
+                    <span class="destination-tag">Ladakh</span>
+                </div>
+                <div class="review-content">
+                    <div class="stars">★★★★★</div>
+                    <p>"Bike trip through mountains was thrilling."</p>
+                    <div class="reviewer">
+                        <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=10">
+                        <div>
+                            <h4>Aditya Roy</h4>
+                            <span>Lucknow</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- CARD 11 -->
+            <div class="review-card" data-category="international luxury">
+                <div class="image-box">
+                    <img src="IMAGES/LONDON.jpeg" alt="">
+                    <span class="destination-tag">London</span>
+                </div>
+                <div class="review-content">
+                    <div class="stars">★★★★★</div>
+                    <p>"Historical landmarks and luxury stay were superb."</p>
+                    <div class="reviewer">
+                        <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=11">
+                        <div>
+                            <h4>Olivia</h4>
+                            <span>Britannica</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- CARD 12 -->
+            <div class="review-card" data-category="international luxury">
+                <div class="image-box">
+                    <img src="IMAGES/krabithailand.jpeg" alt="">
+                    <span class="destination-tag">Thailand</span>
+                </div>
+                <div class="review-content">
+                    <div class="stars">★★★★★</div>
+                    <p>"An absolute paradise with incredible food and welcoming locals. The stunning beaches made the
+                        long flight entirely worth it!".</p>
+                    <div class="reviewer">
+                        <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=12">
+                        <div>
+                            <h4>Arnav Gupta</h4>
+                            <span>Kochi</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- CARD 13 -->
+            <div class="review-card" data-category="international luxury">
+                <div class="image-box">
+                    <img src="IMAGES/New York usa.jpg" alt="">
+                    <span class="destination-tag">New York</span>
+                </div>
+                <div class="review-content">
+                    <div class="stars">★★★★★</div>
+                    <p>"An electric city with an unmatched energy, iconic skyline views, and endless world-class dining."</p>
+                    <div class="reviewer">
+                        <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=14">
+                        <div>
+                            <h4>Shreya</h4>
+                            <span>New Delhi</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- CARD 14 -->
+            <div class="review-card" data-category="international adventure">
+                <div class="image-box">
+                    <img src="IMAGES/KENYA.jpeg" alt="">
+                    <span class="destination-tag">Kenya</span>
+                </div>
+                <div class="review-content">
+                    <div class="stars">★★★★★</div>
+                    <p>"An unforgettable safari adventure with breathtaking views of Mount Kilimanjaro and incredible wildlife encounters."</p>
+                    <div class="reviewer">
+                        <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=16">
+                        <div>
+                            <h4>Shreya</h4>
+                            <span>New Delhi</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- CARD 15 -->
+            <div class="review-card" data-category="international luxury">
+                <div class="image-box">
+                    <img src="IMAGES/Menton in france.jpg" alt="">
+                    <span class="destination-tag">France</span>
+                </div>
+                <div class="review-content">
+                    <div class="stars">★★★★★</div>
+                    <p>"Breathtaking architecture, world-class pastries made exploring France effortless"</p>
+                    <div class="reviewer">
+                        <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=17">
+                        <div>
+                            <h4>Kamyaar</h4>
+                            <span>Karachi</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ADD REVIEW -->
+    <section class="add-review-section">
+        <div class="form-container">
+            <h2>Share Your Story</h2>
+            <input type="text" id="name" placeholder="Your Name">
+            <input type="text" id="destination" placeholder="Destination">
+            <textarea id="reviewText" placeholder="Write your review"></textarea>
+            <div class="star-rating" id="starRating">
+                <span class="star" data-value="1">★</span>
+                <span class="star" data-value="2">★</span>
+                <span class="star" data-value="3">★</span>
+                <span class="star" data-value="4">★</span>
+                <span class="star" data-value="5">★</span>
+            </div>
+            <label class="upload-btn">
+                <i class="fa-solid fa-camera"></i>
+                Upload Travel Photo
+                <input type="file" id="photoUpload" hidden>
+            </label>
+            <div class="preview-box hidden" id="previewBox">
+                <img id="previewImage" src="">
+            </div>
+            <button id="submitBtn">
+                Submit Review
+            </button>
+        </div>
+    </section>
+    <!-- FOOTER -->
+    <footer>
+        <p>© 2026 TravelSphere. All Rights Reserved.</p>
+    </footer>
+    <script src="gallery.js"></script>
+</body>
+</html>

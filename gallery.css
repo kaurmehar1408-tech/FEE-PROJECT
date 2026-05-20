@@ -1,0 +1,455 @@
+/* Removes default browser spacing and sets box model */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* ================= BODY ================= */
+/* Main page styling */
+body {
+    font-family: 'DM Sans', sans-serif;
+    background: #020617;
+    color: white;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+/* ================= HEADER ================= */
+header {
+    display: flex; /* Flexbox layout */
+    justify-content: space-between; /* Space between logo and nav */
+    align-items: center; /* Vertical alignment */
+    padding: 20px 60px; /* Inner spacing */
+    background: #020617; /* Dark background */
+    position: sticky; /* Sticky header */
+    top: 0; /* Stick to top */
+    z-index: 1000; /* Keep above other content */
+}
+/* ================= LOGO ================= */
+.logo {
+    color: #fbbf24; /* Gold color */
+    font-size: 28px;
+    font-weight: bold;
+}
+/* ================= NAVIGATION ================= */
+nav a {
+    color: white;
+    margin-left: 25px; /* Space between links */
+    text-decoration: none; /* Remove underline */
+    font-size: 18px;
+    position: relative; /* Needed for hover underline */
+}
+/* Underline animation */
+nav a::after {
+    content: "";
+    position: absolute;
+    width: 0%; /* Hidden by default */
+    height: 2px;
+    background: #fbbf24;
+    left: 0;
+    bottom: -5px;
+    transition: 0.4s;
+}
+/* Expand underline on hover */
+nav a:hover::after {
+    width: 100%;
+}
+/* ================= HERO SECTION ================= */
+.hero {
+    min-height: 90vh; /* Full screen height */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    padding: 80px 20px;
+}
+/* Large faded background text */
+.hero-bg-text {
+    position: absolute;
+    font-size: 180px;
+    opacity: 0.04;
+    font-family: 'Playfair Display', serif;
+    font-weight: bold;
+}
+/* Hero content container */
+.hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 850px;
+}
+/* Small hero badge/tag */
+.hero-tag {
+    display: inline-block;
+    padding: 10px 20px;
+    border: 1px solid rgba(251, 191, 36, 0.3);
+    border-radius: 50px;
+    color: #fbbf24;
+    margin-bottom: 25px;
+}
+/* Main hero heading */
+.hero h1 {
+    font-size: 70px;
+    line-height: 1.1;
+    margin-bottom: 20px;
+}
+/* Highlighted text inside heading */
+.hero h1 span {
+    color: #fbbf24;
+    font-style: italic;
+}
+/* Hero paragraph */
+.hero p {
+    color: #94a3b8;
+    font-size: 18px;
+    line-height: 1.8;
+    margin-bottom: 50px;
+}
+/* ================= STATS SECTION ================= */
+.stats {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+/* Individual stat card */
+.stat-box {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    padding: 30px;
+    border-radius: 20px;
+    width: 220px;
+    backdrop-filter: blur(15px);
+    transition: 0.3s;
+}
+/* Hover effect */
+.stat-box:hover {
+    transform: translateY(-8px);
+}
+/* Stat number */
+.stat-box h2 {
+    color: #fbbf24;
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+/* Stat label */
+.stat-box span {
+    color: #94a3b8;
+}
+/* ================= FILTER BUTTONS ================= */
+.filters {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+/* Filter button style */
+.filter-btn {
+    padding: 12px 24px;
+    border: none;
+    border-radius: 40px;
+    background: #111827;
+    color: white;
+    cursor: pointer;
+    transition: 0.3s;
+    font-weight: 600;
+}
+/* Active and hover state */
+.filter-btn:hover,
+.filter-btn.active {
+    background: #fbbf24;
+    color: black;
+}
+/* ================= REVIEWS SECTION ================= */
+.reviews-section {
+    padding: 80px 8%;
+}
+/* Section title wrapper */
+.section-title {
+    text-align: center;
+    margin-bottom: 60px;
+}
+/* Main section heading */
+.section-title h2 {
+    font-size: 50px;
+    margin-bottom: 10px;
+}
+/* Section subtitle */
+.section-title p {
+    color: #94a3b8;
+}
+/* ================= REVIEW GRID ================= */
+/* 3 cards per row */
+.reviews-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 30px;
+    align-items: stretch;
+}
+/* ================= REVIEW CARD ================= */
+.review-card {
+    background: #0f172a;
+    border-radius: 20px;
+    overflow: hidden;
+    transition: 0.4s;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(15px);
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    min-height: 100%;
+}
+/* Card hover animation */
+.review-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+}
+/* ================= IMAGE BOX ================= */
+.image-box {
+    position: relative;
+    overflow: hidden;
+}
+/* Review image */
+.image-box img {
+    width: 100%;
+    height: 240px;
+    object-fit: cover;
+    transition: 0.5s;
+    cursor: pointer;
+    display: block;
+}
+/* Zoom image on hover */
+.review-card:hover img {
+    transform: scale(1.08);
+}
+/* Destination tag on image */
+.destination-tag {
+    position: absolute;
+    bottom: 15px;
+    left: 15px;
+    background: #fbbf24;
+    color: black;
+    padding: 6px 14px;
+    border-radius: 30px;
+    font-size: 12px;
+    font-weight: bold;
+}
+/* ================= REVIEW CONTENT ================= */
+.review-content {
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+/* Star ratings */
+.stars {
+    color: #fbbf24;
+    margin-bottom: 15px;
+    font-size: 18px;
+}
+/* Review text */
+.review-content p {
+    line-height: 1.8;
+    color: #d1d5db;
+    margin-bottom: 25px;
+    flex: 1;
+}
+/* ================= REVIEWER INFO ================= */
+.reviewer {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-top: auto;
+}
+/* Reviewer profile image */
+.reviewer img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+/* Reviewer name */
+.reviewer h4 {
+    margin-bottom: 5px;
+}
+/* Reviewer role/location */
+.reviewer span {
+    color: #94a3b8;
+    font-size: 13px;
+}
+/* ================= ADD REVIEW SECTION ================= */
+.add-review-section {
+    padding: 80px 8%;
+}
+/* Review form container */
+.form-container {
+    max-width: 700px;
+    margin: auto;
+    background: #0f172a;
+    padding: 40px;
+    border-radius: 25px;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+}
+/* Form heading */
+.form-container h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 42px;
+}
+/* Input and textarea styling */
+.form-container input,
+.form-container textarea {
+    width: 100%;
+    padding: 16px;
+    margin-bottom: 20px;
+    border: none;
+    outline: none;
+    border-radius: 14px;
+    background: #111827;
+    color: white;
+    font-size: 15px;
+}
+/* Textarea custom height */
+.form-container textarea {
+    height: 140px;
+    resize: none;
+}
+/* ================= STAR RATING ================= */
+.star-rating {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 25px;
+}
+/* Individual star */
+.star {
+    font-size: 35px;
+    cursor: pointer;
+    color: #475569;
+    transition: 0.3s;
+}
+/* Active selected star */
+.star.active {
+    color: #fbbf24;
+}
+/* ================= IMAGE UPLOAD ================= */
+.upload-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 18px;
+    border: 2px dashed rgba(251, 191, 36, 0.4);
+    border-radius: 14px;
+    cursor: pointer;
+    margin-bottom: 20px;
+    transition: 0.3s;
+}
+/* Upload hover effect */
+.upload-btn:hover {
+    background: rgba(251, 191, 36, 0.08);
+}
+/* ================= IMAGE PREVIEW ================= */
+.preview-box {
+    margin-bottom: 20px;
+}
+/* Preview image */
+.preview-box img {
+    width: 100%;
+    border-radius: 15px;
+    height: 260px;
+    object-fit: cover;
+}
+/* Hidden utility class */
+.hidden {
+    display: none;
+}
+/* ================= SUBMIT BUTTON ================= */
+#submitBtn {
+    width: 100%;
+    padding: 18px;
+    border: none;
+    border-radius: 14px;
+    background: #fbbf24;
+    color: black;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+/* Button hover effect */
+#submitBtn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(251, 191, 36, 0.25);
+}
+/* ================= FOOTER ================= */
+footer {
+    text-align: center;
+    padding: 30px;
+    color: #94a3b8;
+}
+/* ================= RESPONSIVE DESIGN ================= */
+/* ===== TABLET VIEW ===== */
+@media(max-width:992px) {
+    /* Show 2 cards per row */
+    .reviews-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    /* Smaller hero heading */
+    .hero h1 {
+        font-size: 55px;
+    }
+}
+/* ===== MOBILE VIEW ===== */
+@media(max-width:768px) {
+    /* Adjust hero heading */
+    .hero h1 {
+        font-size: 45px;
+    }
+    /* Smaller background text */
+    .hero-bg-text {
+        font-size: 100px;
+    }
+    /* Smaller section heading */
+    .section-title h2 {
+        font-size: 38px;
+    }
+    /* Reduce form padding */
+    .form-container {
+        padding: 25px;
+    }
+    /* Hide navbar */
+    .navbar {
+        display: none;
+    }
+    /* Single column cards */
+    .reviews-grid {
+        grid-template-columns: 1fr;
+    }
+    /* Stack stats vertically */
+    .stats {
+        flex-direction: column;
+        align-items: center;
+    }
+    /* Responsive stat cards */
+    .stat-box {
+        width: 100%;
+        max-width: 320px;
+    }
+}
+/* ===== SMALL MOBILE VIEW ===== */
+@media(max-width:480px) {
+    /* Smaller hero text */
+    .hero h1 {
+        font-size: 36px;
+    }
+    /* Smaller section titles */
+    .section-title h2 {
+        font-size: 30px;
+    }
+    /* Reduce review content padding */
+    .review-content {
+        padding: 20px;
+    }
+    /* Reduce form padding */
+    .form-container {
+        padding: 20px;
+    }
+}
