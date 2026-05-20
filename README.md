@@ -1,2 +1,2 @@
 # FEE-PROJECT
-VERCEL LINK = fee-project-beige.vercel.app
+VERCEL LINK = https://fee-project-beige.vercel.app
