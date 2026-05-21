@@ -110,49 +110,62 @@ nav a:hover::after{
 }
 /* Horizontal scroll row */
 .scroll-container{
-    display:flex; /* Flexbox row */
-    overflow-x:auto; /* Horizontal scroll */
-    gap:20px; /* Space between cards */
-    padding:20px; /* Padding */
-    scroll-behavior:smooth; /* Smooth scrolling */
-    align-items:flex-start; /* Align items at top */
+    display:flex;
+    overflow-x:auto;
+    gap:20px;
+    padding:20px;
+    scroll-behavior:smooth;
+    align-items:stretch; /* All cards stretch to same height */
 }
 /* Scrollbar styling */
 .scroll-container::-webkit-scrollbar{
-    height:8px; /* Scrollbar height */
+    height:8px;
 }
 /* Scrollbar thumb */
 .scroll-container::-webkit-scrollbar-thumb{
-    background:#020617; /* Scrollbar color */
-    border-radius:10px; /* Rounded scrollbar */
+    background:#1e293b;
+    border-radius:10px;
 }
-/* Destination cards */
+/* Destination cards — uniform size with flex column layout */
 .card{
-    min-width:250px; /* Minimum card width */
-    max-width:250px; /* Maximum card width */
-    background:#111827; /* Card background */
-    border-radius:12px; /* Rounded corners */
-    overflow:hidden; /* Hide overflow */
-    text-align:center; /* Center text */
-    transition:0.4s; /* Smooth hover */
-    animation:fadeUp 1s ease; /* Fade animation */
-    flex-shrink:0; /* Prevent shrinking */
+    min-width:250px;
+    max-width:250px;
+    width:250px;
+    background:#111827;
+    border-radius:12px;
+    overflow:hidden;
+    text-align:center;
+    transition:0.4s;
+    animation:fadeUp 1s ease;
+    flex-shrink:0;
+    display:flex;             /* flex column so all sections stack evenly */
+    flex-direction:column;
 }
-/* Card image */
+/* Card image — fixed height, never stretches */
 .card img{
-    width:100%; /* Full width image */
-    height:220px; /* Fixed height */
-    object-fit:cover; /* Crop image */
+    width:100%;
+    height:200px;
+    object-fit:cover;
+    flex-shrink:0;            /* image never squishes */
 }
-/* Card text */
+/* Card title — fixed height with vertical centering */
 .card h4{
-    padding:12px; /* Space inside */
-    font-size:15px; /* Text size */
+    padding:10px 12px;
+    font-size:14px;
+    line-height:1.4;
+    min-height:52px;          /* holds 2 lines — keeps all titles same height */
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+/* Book Now button — always pinned to bottom */
+.card a[href="booking.html"]{
+    margin-top:auto;          /* pushes button to bottom regardless of title length */
 }
 /* Hover animation */
 .card:hover{
-    transform:scale(1.08); /* Zoom effect */
-    box-shadow:0 0 20px rgba(251,191,36,0.5); /* Glow effect */
+    transform:scale(1.05);
+    box-shadow:0 0 20px rgba(251,191,36,0.5);
 }
 /* ================= FOOTER ================= */
 footer{
