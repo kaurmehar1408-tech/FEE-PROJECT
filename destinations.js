@@ -185,7 +185,6 @@ const placeWeatherCity = {
 
 // Cache so we never fetch the same city twice
 const weatherCache = {};
-
 function getWeatherEmoji(desc = "") {
     const d = desc.toLowerCase();
     if (d.includes("sunny") || d.includes("clear"))          return "☀️";
@@ -612,7 +611,7 @@ const destinationsData = [
             { name: "Bali", image: "IMAGES/Bali.jpg" },
             { name: "Raja Ampat", image: "IMAGES/Raja Ampat.jpg" },
             { name: "Komodo National Park", image: "IMAGES/Komodo National Park.jpg" },
-            { name: "Raja Ampat Islands", image: "IMAGES/Raja Ampat.jpg" }
+            { name: "Nusa Penida", image: "IMAGES/Nusa Penida.jpg" }
         ]
     },
     {
@@ -651,7 +650,7 @@ const destinationsData = [
             { name: "Sintra", image: "IMAGES/Sintra-Portugal.jpg" },
             { name: "Porto", image: "IMAGES/Porto.jpg" },
             { name: "Coimbra", image: "IMAGES/Coimbra.jpg" },
-            { name: "Évora", image: "IMAGES/Évora.webp" },
+            { name: "Évora", image: "IMAGES/EVORA.webp" },
             { name: "Lagos", image: "IMAGES/Lagos.jpeg" }
         ]
     },
@@ -678,7 +677,7 @@ const destinationsData = [
     {
         country: "THAILAND",
         places: [
-            { name: "Krabi", image: "IMAGES/Krabilimestone.jpg" },
+            { name: "Krabi Limestone", image: "IMAGES/Krabilimestone.jpg" },
             { name: "Chiang Mai's mountainous culture", image: "IMAGES/Chiang Mai's mountainous culture.avif" },
             { name: "Phuket's Beaches", image: "IMAGES/Phuket's beaches.jpg" },
             { name: "Bangkok's Grand Temples", image: "IMAGES/Bangkok's grand temples.jpg" },
